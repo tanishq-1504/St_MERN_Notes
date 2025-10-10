@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Checkbox Validation</title>
+    <script>
+        function loginValidation() {
+            var uname = document.myform.username.value;
+            var pass = document.myform.password.value;
+            if (uname == null || uname == "") {
+                alert("Name cant be blank");
+                return false;
+            } 
+            if(pass.length<8) {
+                alert("Password must contain at leadt 6 characters")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Login Page:</h3>
+    <form name="myform" action="LoginSuccess.html" onsubmit="return loginValidation()">
+        User Name: <input type="text" name="username"><br>
+        Password:<input type="password" name="password"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

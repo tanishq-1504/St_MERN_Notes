@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>ES6 Programming - Multilevel Inheritance</title>
+    </head>
+    <body>
+        <h1>JavaScript Classes - Multilevel Inheritance</h1>
+        <script>
+            class Car{
+                constructor(brand){
+                    this.brand = brand;
+                }
+                displayBrand(){
+                    document.write("<br> Car Brand:" + this.brand);
+                }
+            }
+            class Model extends Car{
+                constructor(brand,model){
+                    super(brand);
+                    this.model = model;
+                }
+                displayModel(){
+                    document.write("<br>Model Name:" + this.model);
+                }
+            }
+            class Variant extends Model {
+                constructor(brand,model,variant){
+                    super(brand,model);
+                    this.variant = variant;
+                }
+                displayVariant(){
+                    document.write("<br> Variant Type:" + this.variant);
+                }
+            }
+            var myCar = new Variant("TATA","Safari","XZA");
+            myCar.displayBrand();
+            myCar.displayModel();
+            myCar.displayVariant()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Es6 Programming</title>
+    </head>
+    <body>
+        <h1>
+            JavaScript Programming
+        </h1>
+        <script>
+            class Car{
+                brand="TATA";
+                display(){
+                    document.write("<br>My Car Name is:"+this.brand);
+                }
+            }
+            class Myclass extends Car {
+                mydata(){
+                    document.write("<br>Myclass method");
+                }
+            }
+            var myc=new Myclass();
+            myc.mydata();
+            myc.display();
+            document.write("<br> My Brand is"+myc.brand);
+        </script>
+    </body>
+</html>

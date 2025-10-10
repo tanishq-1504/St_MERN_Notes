@@ -1,0 +1,23 @@
+<html> 
+        <title>JavaScript Programming</title>
+        <script>
+             const url='https://jsonplaceholder.typicode.com/posts';
+
+           fetch(url).then(resram => {
+            if(!resram.ok){
+                throw new Error('Error fetch data :RAM');
+            }
+            return resram.json();
+
+           }).then(data => {
+               console.log('Data form the API',data);
+              
+           }).catch(error => {
+             console.error('Hello Error :',error);
+           })
+         </script>
+    </head>
+      <body>
+         <h1>JavaScript..</h1>
+      </body>
+</html>

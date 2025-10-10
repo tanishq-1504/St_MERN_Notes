@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 16px 32px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-radius: 60px; 
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0077ff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links .btn {
+  background: #0077ff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.hero {
+  text-align: center;
+  padding: 64px 16px;
+  background: linear-gradient(to right, #0077ff, #00c6ff);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 32px;
+}
+
+.hero .btn {
+  background: #fff;
+  color: #0077ff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.courses {
+  padding: 32px;
+  text-align: center;
+}
+
+.course-grid {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.course-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  width: 250px;
+}
+
+.course-card h3 {
+  color: #0077ff;
+  margin-bottom: 8px;
+}
+
+.course-card span {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+footer {
+  text-align: center;
+  padding: 16px;
+  background: #eee;
+  margin-top: 32px;
+}
+form {
+  max-width: 400px;
+  margin: 32px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 12px;
+  background: #feffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 150px;
+  
+}
+button:hover {
+  background-color: #9f76f8;
+  color: white;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+form{
+  align-items: center;
+}

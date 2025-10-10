@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>JavaScript Programmong</title>
+        <script>
+            function delay(ms){
+                return new Promise(function(resolve){
+                    setTimeout(resolve,ms);
+                });
+            }   
+            async function runDemo(){
+                console.log("Anu");
+                await delay(10);
+                console.log("Bhanu(from await Delay)");
+                console.log("Chandu");
+            }
+            runDemo();
+        </script>
+    </head>
+</html>

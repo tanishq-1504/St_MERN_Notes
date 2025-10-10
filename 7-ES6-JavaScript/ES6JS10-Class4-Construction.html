@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>ES6 Programming</title>
+</head>
+
+<body>
+    <h1>JavaScript.Classes</h1>
+    <script>
+        var brand;
+        class car {
+            constructor(name) {
+                this.brand = name;
+            }
+            display() {
+                document.write("<br>This is my Car:" + this.brand);
+            }
+        }
+        var mycar = new car("TATA");
+        document.write("<br>My Car Name is:", mycar.brand);
+        mycar.display();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Polymorphism Example</title>
+    </head>
+    <body>
+        <script>
+
+            class Animal{
+                sound(){
+                    return"Some generic sound";
+                }
+            }
+            class Dog extends Animal{
+                sound(){
+                    return"Woof! Woof!";
+                }
+            }
+            class Cat extends Animal {
+                sound(){
+                    return"Meow! Meow!";
+                }
+            }
+            let animal = new Animal();
+            let dog = new Dog();
+            let cat = new Cat();
+            let myanimal = [animal,dog,cat];
+            for(let i=0;i<myanimal.length;i++){
+                document.write(myanimal[i].sound()+"<br>");
+            }
+        </script>
+    </body>
+</html>

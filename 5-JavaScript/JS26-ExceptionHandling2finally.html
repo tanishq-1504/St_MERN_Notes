@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>JavaScript functions</title>
+    <script>
+        function divide(a, b) {
+            try {
+                console.log("One");
+                if (b == 0) {
+                    throw new Error("Divide by zero is not allowed..")
+                }
+                let result = a / b;
+                console.log(result);
+                console.log("End");
+            }
+            catch (error) {
+                console.error("Program is Error:" + error)
+            }
+            finally{
+                console.log("finally : for close")
+            }
+        }
+        divide(22,0);
+        </script>
+</head>
+
+<body>
+    <h2>JavaScript function parameters</h2>
+</body>
+
+</html>

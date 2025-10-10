@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>CSS3</title>
+        <style>
+            .mydata{
+                margin: 0 auto;
+                background: hsl(154, 94%, 37%);
+                box-sizing: border-box;
+            }/*SmartPhone (portait and landscape)*/
+            @media  screen and (min-width:767px) {
+                .mydata{
+                    width:100px;
+                    padding:5px 10px;
+                } 
+            }
+            /* tablets,iPad (portait and landscape)*/
+            @media screen and (min-width:768px) and (max-width: 1024px){
+                .mydata{
+                    width:750px;
+                    padding:5px 10px;
+                }
+            }
+            /*Low resulationDestop and laptops*/
+            @media screen and (min-width:1025px){
+                .mydata{
+                    width:1200px;
+                    padding:5px 20px;
+                }
+            }
+            /*High resolution destops and laptops*/
+            @media screen and(min-width:1280px){
+                .mydata{
+                    width:1200px;
+                    padding:5px 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mydata">
+            <h1>Web Technologies</h1>
+            <h2>
+                media queries are CSS3 rules thgat allow developers to create syltes based on the ...
+            </h2>
+        </div>
+    </body>
+</html>
