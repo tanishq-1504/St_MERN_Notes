@@ -13,8 +13,6 @@ body {
     color: #333;
 }
 
-
-/* Header */
 .header {
     background: transparent;
     background-color: #ffffff; 
@@ -37,27 +35,19 @@ body {
     justify-content: space-between;
 }
 
-/* Logo */
 .logo {
     display: flex;
     align-items: center;
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: #222;
 }
 
-.logo img {
-    width: 45px;
-    height: auto;
-    margin-right: 10px;
-}
-
-/* Navbar */
 .navbar__list {
     list-style: none;
     display: inline-flex;
-    gap: 2rem;
+    gap: 32px;
     align-items: center;
 }
 
@@ -76,15 +66,15 @@ a:hover{
     color: purple;
 }
 
-
 .navbar__end {
     padding-left: 50px;
     list-style: none;
     text-decoration: none;
     display: flex;
-    gap: 2rem;
+    gap: 32px;
     align-items: center;
 }
+
 .btn {
     width: 10em;
     height: 5ex;
@@ -133,6 +123,7 @@ a:hover{
     background-color: #f7e7f9;
     /* background-color: linear-gradient( #f7e7f9, #ffffff); */
 }
+
 h1 {
     font-size:60px;
 }
@@ -452,14 +443,6 @@ h3 {
     display: flex;
     gap: 25%;
 }
-.working-img {
-    width: 100px;
-    height: 100px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.working-img:hover{
-    transform: scale(1.1);
-}
 .working-steps-text{
     display: flex;
     justify-content: center;
@@ -477,9 +460,10 @@ h3 {
     width: 330px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     transition: transform 0.3s ease, box-shasow 0.3s ease;
 }
 .working-steps-text1:hover{
     transform: scale(1.1);
+    align-items: center;
 }
