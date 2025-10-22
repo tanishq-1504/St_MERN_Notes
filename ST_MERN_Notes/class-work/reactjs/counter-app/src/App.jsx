@@ -8,11 +8,11 @@ function App() {
   }
 
   function decrement(){
-    setCount((previousCount) => (previousCount - 1))
+    setCount((previousCount) => (previousCount - 1)) // ()=>(), ()=>{ return ... }
   }
-
   return (
-    <> fragment 
+    <> 
+    {/* fragment  */}
     {
       count ? <p>{count}</p> : <p>No Data</p>
     }
