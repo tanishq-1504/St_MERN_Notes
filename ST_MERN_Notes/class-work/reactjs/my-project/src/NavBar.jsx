@@ -1,8 +1,6 @@
-import { useNavigate } from "react-router-dom";
-
+import PrimaryButton from "./PrimaryButton.jsx";
 
 function NavBar() {
-    const navigate = useNavigate();
     return (
         <div className="fixed top-0 left-2 right-2 h-[32px] bg-white rounded-xl flex items-center justify-between">
             <div>
@@ -10,14 +8,15 @@ function NavBar() {
             </div>
             <nav className="ml-4 flex items-center justify-center">
                 <ul className="flex items-center gap-6">
-                    <li onClick={() => navigate("/App")} className="font-medium text-lg text-black hover:text-red-500 hover:cursor-pointer">Home</li>
+                    <li className="font-medium text-lg text-black hover:text-red-500 hover:cursor-pointer">Home</li>
                     <li className="font-medium text-lg text-black hover:text-red-500 hover:cursor-pointer">About</li>
                     <li className="font-medium text-lg text-black hover:text-red-500 hover:cursor-pointer">Contact Us</li>
                 </ul>
             </nav>
             <div className="flex items-center gap-3">
-                <button onClick={() => navigate("/ControlledForm")} className="cursor-pointer px-4 py-0.75 bg-red-600 text-white rounded-xl hover:bg-red-700">Login</button>   
-                <button c className="cursor-pointer px-4 py-0.75 bg-red-600 text-white rounded-xl hover:bg-red-700">Register</button>   
+
+                <PrimaryButton buttonText="Register" />
+                <PrimaryButton buttonText="Login" />
                 
             </div>
         </div>
