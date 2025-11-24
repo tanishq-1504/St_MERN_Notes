@@ -2,16 +2,23 @@ const todoForm = document.getElementById("todo-form");
 const todoInput = document.getElementById("todo-input");
 const addBtn = document.getElementById("add-btn");
 const todoList = document.getElementById("todo-list");
+console.log("Welcome to todo application")
 
-let todos = [];
+document.addEventListener("DOMContentLoaded", loadTodos)
+const BASS_URL = "http://localhost:3000"
 
-const savedTodos = localStorage.getItem("todos");
-console.log(typeof savedTodos); // string
-console.log(savedTodos)
+async function loadTodos(){
+    const response = await fetch(`${BASS_URL}/api/v1/todos`);
+    if(!response.ok){
+        alert("The URL is not valid!")
+    }
+    console.log(response);
 
-if(savedTodos){
-    todos = JSON.parse(savedTodos);
-    renderTodos()
+    const data = await response.json();
+    
+    console.log(typeof data, data);
+
+    renderTodos(data.allTodos)
 }
 
 todoForm.addEventListener("submit", function(event){
@@ -23,19 +30,16 @@ todoForm.addEventListener("submit", function(event){
         return;
     }
 
-    todos.push(newTodoText);
-
-    localStorage.setItem("todos", JSON.stringify(todos))
-
     todoInput.value = "";
 })
 
-function renderTodos(){
-    todoList.inneHTML = "";
-
-    for(let index = 0; index < todos.length; index++){
-        const newListItem = document.createElement("li");
-        newListItem.textContent = todos[index];
-        todoList.appendChild(newListItem);
-    }
+function renderTodos(todos){
+    todoList.innerHTML = "";
+    todos.map((todo) => {
+        console.log(todo)
+        console.log(todo.taskText);
+        const li = document.createElement("li");
+        li.textContent = todo.taskText;
+        todoList.prepend(li)
+    })
 }

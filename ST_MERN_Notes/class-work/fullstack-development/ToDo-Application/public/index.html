@@ -1,19 +1,32 @@
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Todo Application</title>
-    </head>
-    <body>
-        <h1>Todo List</h1>
 
-        <form id="todo-form">
-            <input id="todo-input" type="text">
-            <button type="submit" id="add-btn">Add To-Do</button>
-        </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-        <ul id="todo-list">
-        </ul>
+<body>
+    <header>
+        <h1>Todo Application</h1>
+    </header>
 
-        <script src="./app.js"></script>
-    </body>
+    <main>
+        <section>
+            <form id="todo-form">
+                <input id="todo-input" type="text">
+                <button type="submit" id="add-btn">Add todo</button>
+            </form>
+        </section>
+
+        <section>
+            <h3>List of Tasks</h3>
+            <ul id="todo-list">
+            </ul>
+        </section>
+    </main>
+    <script src="./app.js"></script>
+
+</body>
+
 </html>
