@@ -5,7 +5,7 @@ function Task(taskText, isTaskDone){
     this.taskId = nextId++;
     this.taskText = taskText;
     this.isTaskDone = isTaskDone;
-    this.timeStamp = new Date();
+    this.timeStamp = Date.now();
 }
 
 function TodoStore(){
@@ -25,6 +25,12 @@ TodoStore.prototype.getAllTodos = function(){
 TodoStore.prototype.toggleTask = function(taskIdToUpdate){
     const taskWithId = this.todoStore.find((task)=>(task.taskId === taskIdToUpdate));
     taskWithId.isTaskDone = !taskWithId.isTaskDone
+    
+    // if(taskWithId){
+    //     taskWithId.isTaskDone = false
+    // }else{
+    //     taskWithId.isTaskDone = true;
+    // }
 }
 
 
