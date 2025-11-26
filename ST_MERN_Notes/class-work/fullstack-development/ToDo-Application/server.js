@@ -1,63 +1,59 @@
 const express = require("express");
-const path = require("path");
-const { TodoStore } = require("./TodoStore.js");
+const path = require ("path");
+const { TodoStore } = require("./TodoStore");
 
-console.log("Welcome to your first backend server...")
+console.log("Welcome to your first Backend server.....")
 
 const app = express();
-const publicAbsolutePath = path.join(__dirname, "public");
+const publicAbsolutePath = path.join(__dirname,"public");
 const hostThePublic = express.static(publicAbsolutePath);
 
 const todoStoreInstance = new TodoStore();
 
-// Middlewares
 app.use(hostThePublic);
 app.use(express.json());
 
 const PORT = 3000;
 
-app.get("/welcome", (request, response) => {
+app.get("/welcome",(request,response)=>{
   response.json({
-    message: "Welcome to first api calling...."
+    message:"Welcome to first api calling...."
   })
 })
-
-app.get("/api/v1/todos", (req, res) => {
+app.get("/api/v1/todos",(req,res)=>{
   const allTodos = todoStoreInstance.getAllTodos();
 
   res.status(200).json({
-    success: true,
-    allTodos: allTodos // Array of Task Objects [{}, {}, ....{}]
-  }) 
-  // res -> headers -> Content-Type: "application/json; charset=utf-8"
+    success:true,
+    allTodos:allTodos
+  })
 })
 
-app.post("/api/v1/todos", (req, res) => {
-  const { taskText, isTaskDone } = req.body;
+app.post("/api/v1/todos", (req,res)=>{
+  const {taskText, isTaskDone}= req.body;
 
-  if (!taskText.trim() || typeof taskText !== "string") {
+  if(typeof taskText !== "string" || !taskText.trim()){
     res.status(400).json({
-      error: true,
-      message: "Task text should be string and It shouldn't be empty!"
-    }) // returned this response
+      error:true,
+      message:"Task text should be string and It shouldn't be empty!"
+    })
   }
 
   const newTask = todoStoreInstance.saveTodo(taskText, isTaskDone);
 
   res.status(201).json({
-    success: true,
-    message: "New Task is created successfully!",
+    success:true,
+    message:"New Task has been created successfully!",
     newTask: newTask
   })
 
 })
 
-app.get("/", (request, response) => {
-  console.log(path.join(__dirname, "public", "index.html"))
-  response.sendFile(path.join(__dirname, "public", "index.html"))
+app.get("/",(request,response)=>{
+  console.log(path.join(__dirname,"public","index.html"))
+response.sendFile(path.join(__dirname,"public","index.html"))
 })
-
-app.listen(PORT, function () {
-  console.log("Server is running at port: ", PORT);
-  console.log(`http://localhost:${PORT}`)
+app.listen(PORT,function(){
+  console.log("Server is running at port:",PORT);
+  console.log(`http://localhost:${PORT}`);
 });
