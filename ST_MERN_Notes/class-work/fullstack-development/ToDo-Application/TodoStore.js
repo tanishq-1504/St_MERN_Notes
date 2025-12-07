@@ -1,53 +1,47 @@
+
 let nextId = 1;
 
-function Task(taskText, isTaskDone) {
-  this.taskId = nextId++;
-  this.taskText = taskText;
-  this.isTaskDone = isTaskDone;
-  this.timeStamp = Date.now();
+function Task(taskText, isTaskDone){
+    this.taskId = nextId++;
+    this.taskText = taskText;
+    this.isTaskDone = isTaskDone;
+    this.timeStamp = new Date();
 }
 
-function TodoStore() {
-  this.todoStore = [];
+function TodoStore(){
+    this.todoStore = [];
 }
 
-TodoStore.prototype.saveTodo = function (taskText, isTaskDone) {
-  const newTask = new Task(taskText, isTaskDone);
-  this.todoStore.push(newTask);
-  return newTask;
-};
 
-TodoStore.prototype.getAllTodos = function () {
-  return this.todoStore;
-};
+TodoStore.prototype.saveTodo = function(taskText, isTaskDone){ 
+    const newTask = new Task(taskText, isTaskDone);
+    this.todoStore.push(newTask)
+    return newTask;
+}
 
-TodoStore.prototype.toggleTask = function (taskIdToUpdate) {
-  const taskWithId = this.todoStore.find(
-    (task) => task.taskId === taskIdToUpdate
-  );
+TodoStore.prototype.getAllTodos = function(){
+    return this.todoStore;
+}
 
-  if (!taskWithId) {
-    return null;
-  }
+TodoStore.prototype.toggleTask = function(taskIdToBeToggled){
+    const taskWithId = this.todoStore.find((task)=> task.taskId === taskIdToBeToggled);
+    console.log(taskWithId);
+    taskWithId.isTaskDone = !taskWithId.isTaskDone
+    console.log(this.todoStore);
+    return true;
+}
 
-  taskWithId.isTaskDone = !taskWithId.isTaskDone;
-  return taskWithId;
-};
+TodoStore.prototype.deleteTask = function(taskIdToDelete){
+    console.log(typeof taskIdToDelete)
+    const taskIndex = this.todoStore.findIndex((task) => task.taskId === taskIdToDelete);
+    console.log(taskIndex);
+    this.todoStore.splice(taskIndex, 1);
+    console.log(this.todoStore);
+    return true;
+}
 
-TodoStore.prototype.deleteTodo = function (taskIdToDelete) {
-  const index = this.todoStore.findIndex(
-    (task) => task.taskId === taskIdToDelete
-  );
-
-  if (index === -1) {
-    return false;
-  }
-
-  this.todoStore.splice(index, 1);
-  return true;
-};
 
 module.exports = {
-  TodoStore,
-  Task,
-};
+    TodoStore,
+    Task
+}
