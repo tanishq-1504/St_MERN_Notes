@@ -12,14 +12,14 @@ import "remixicon/fonts/remixicon.css";
 
 const NavBarTrainer = () => {
   return (
-    <>
-      <div className="pb-20">
-        <button className="font-medium cursor-pointer text-6xl text-shadow-lg">
+    <div>
+      <div>
+        <Link to="/profile" className="font-medium cursor-pointer text-6xl text-shadow-lg bg-[#C8F0D2]  ">
           <i className="ri-code-box-line "></i> JEDI
-        </button>
+        </Link>
         <br></br>
       </div>
-      <div className="justify-items-start ">
+      <div className="justify-items-start pt-30 ">
         <Link
           to="/profile"
           className="hover:-translate-y-1 transition-transform duration-300 pt-1 pl-1 pr-3 pb-3 hover:bg-black hover:text-[#bee6c7] font-medium text-xl flex items-center gap-2">
@@ -44,14 +44,14 @@ const NavBarTrainer = () => {
         </button>
         <br></br>
       </div>
-      <div className="justify-items-start pt-80 ">
+      <div className="justify-items-start pt-90 ">
         <button className="hover:-translate-y-1 transition-transform duration-300 pt-1 pl-1 pr-3 pb-3 hover:bg-black hover:text-[#bee6c7] font-medium text-xl flex items-center gap-2">
           <Settings />
           Preferance
         </button>
         <br></br>
       </div>
-    </>
+    </div>
   );
 };
 

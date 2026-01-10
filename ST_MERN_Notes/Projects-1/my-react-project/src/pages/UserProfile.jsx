@@ -1,5 +1,5 @@
 import React from 'react';
-import Part1 from '../2-landing-page/Part1';
+import Part1 from '../3-home-page/Part1';
 
 const UserProfile = () => {
   return (

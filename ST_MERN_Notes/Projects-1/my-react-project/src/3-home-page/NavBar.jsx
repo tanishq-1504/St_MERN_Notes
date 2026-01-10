@@ -13,7 +13,7 @@ const NavBar = () => {
 
   }
   return (
-    <>
+    <div className='p-4'>
     <div className='pb-20'>
         <button className='font-medium cursor-pointer text-6xl text-shadow-lg'><i className="ri-code-box-line "></i> JEDI</button><br></br>
     </div>
@@ -28,7 +28,7 @@ const NavBar = () => {
       <button className='hover:-translate-y-1 transition-transform duration-300 pt-1 pl-1 pr-3 pb-3 hover:bg-black hover:text-[#bee6c7] font-medium text-xl flex items-center gap-2'><Settings/>Preferance</button><br></br>
       <button onClick={handlelogoutuser} className='hover:-translate-y-1 transition-transform duration-300 pt-1 pl-1 pr-3 pb-3 hover:bg-black hover:text-[#bee6c7] font-medium text-xl flex items-center gap-2'><LogOut/><h1>Log Out</h1></button><br></br>
     </div>
-    </>
+    </div>
   )
 }
 

@@ -43,16 +43,20 @@ function App() {
   }
 
   return (
-    <>
-      <h1 className="font-bold text-5xl">Social Media Feed</h1>
-      <nav className="bg-red-300 rounded-full p-3 flex items-center gap-5">
+    <div className="w-full h-screen bg-amber-500">
+      <div className="pl-10 pt-7">
+        <nav className=" rounded-full p-3 w-40 flex items-center gap-5">
+      
         {
           currentUser.labels.includes('admin') && <Link to="/dashboard">My Dashboard</Link>
         }
-        <Link to="/profile">My Profile</Link>
         
-      </nav>
-    </>
+        <Link to="/profile" className="bg-amber-700 pl-10 pr-10">Student Profile</Link>
+
+        <Link to="/teacher-profile">Teacher-Profile</Link>
+        </nav>
+      </div>
+    </div>
   )
 }
 
