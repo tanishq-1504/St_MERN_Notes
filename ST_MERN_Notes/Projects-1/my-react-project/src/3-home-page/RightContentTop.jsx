@@ -4,7 +4,7 @@ import React from "react";
 const RightContentTop = () => {
   return (
     <div className="h-full w-full bg-[#F1FF70] flex flex-col items-center justify-center border-black border-2">
-      <h1 className="text-5xl pr-25 pb-3 font-bold text-shadow-4xl font-family">Find your next Teach</h1>
+      <h1 className="text-5xl pr-25 pb-3 font-bold text-shadow-4xly">Find your next Teach</h1>
       <h1 className="text-5xl font-bold pl-25 pb-10">To reach the next Level</h1>
 
       <form className="flex items-center gap-5 shadow-2xl">

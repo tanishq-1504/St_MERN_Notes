@@ -14,7 +14,7 @@ const NavBarTrainer = () => {
   return (
     <div>
       <div>
-        <Link to="/profile" className="font-medium cursor-pointer text-6xl text-shadow-lg bg-[#C8F0D2]  ">
+        <Link to="/profile" className="font-medium cursor-pointer text-6xl bg-[#C8F0D2]  ">
           <i className="ri-code-box-line "></i> JEDI
         </Link>
         <br></br>
