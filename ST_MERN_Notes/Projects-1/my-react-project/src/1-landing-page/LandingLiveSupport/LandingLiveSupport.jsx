@@ -2,7 +2,7 @@ import React from 'react'
 
 const LandingLiveSupport = () => {
   return (
-    <div>LandingLiveSupport</div>
+    <div id="support">LandingLiveSupport</div>
   )
 }
 

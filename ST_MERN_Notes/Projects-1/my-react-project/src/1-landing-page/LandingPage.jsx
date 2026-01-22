@@ -12,10 +12,10 @@ const LandingPage = () => {
       <div className="bg-[#FFFCEB] w-full h-full ">
         <div>
           <LandingNavbar />
-          <div className=" pl-5 pr-5 pt-3">
+        </div>
+          <div className=" pl-5 pr-5 pt-20">
             <LandingHome />
           </div>
-        </div>
       </div>
       <div className="bg-[#FFFCEB] w-full h-full ">
         <div className="pt-30">

@@ -1,10 +1,10 @@
-import React from "react";
-
 const LandingHomeRightTop = () => {
   return (
-    <div>
-      LandingHomeRightTop
-    </div>
+    <img
+      src="/image.png"
+      alt=""
+      className="w-200 h-130 relative z-0"
+    />
   );
 };
 

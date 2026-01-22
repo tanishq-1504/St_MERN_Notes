@@ -10,6 +10,7 @@ import MyDashboard from "./pages/my-dashboard/MyDashboard";
 import AdminRoute from "./routes/AdminRoute";
 import TrainersPage from "./pages/TrainersPage";
 import UserProfile from "./pages/UserProfile";
+import LandingHome from "./1-landing-page/LandingHome/LandingHome";
 import LandingPage from "./1-landing-page/LandingPage";
 
 const router = createBrowserRouter([
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
     element: (
       <PublicRoute>
         <SignUpPage />
+      </PublicRoute>
+    ),
+  },
+  {
+    path: "/home-page",
+    element:(
+      <PublicRoute>
+        <LandingHome/>
       </PublicRoute>
     ),
   },

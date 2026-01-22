@@ -7,14 +7,14 @@ const LandingNavbar = () => {
   function handleNavigateToLoginPage() {
     navigate("/login");
   }
-
-  function handleNavigateToRegisterPage() {
-    navigate("/register");
+  function handleNavigationToHomePage(){
+    navigate("/");
   }
+  
 
   return (
-    <div className="w-screen h-20 bg-[#FFFCEB] flex justify-between">
-      <div className="pl-12 pt-6 flex space-x-10 ">
+    <div className="w-screen h-20 bg-[#FFFCEB] flex justify-between fixed z-50">
+      <div className="pl-12 pt-6 flex space-x-10">
         <Link className="bg-amber-400 cursor-pointer rounded-full p-6 border-2 border-gray-900 shadow-[6px_6px_0px_#1e293b]">
           Logo
         </Link>
@@ -22,11 +22,11 @@ const LandingNavbar = () => {
       </div>
 
       <div className="pr-10 pt-8 space-x-10">
-        <Link className="text-xl cursor-pointer">Home</Link>
-        <Link className="text-xl cursor-pointer">About</Link>
-        <Link className="text-xl cursor-pointer">Services</Link>
-        <Link className="text-xl cursor-pointer">Live support</Link>
-        <Link className="text-xl cursor-pointer">Our plans</Link>
+        <a href="#home"className="text-xl cursor-pointer">Home</a>
+        <a href="#about"className="text-xl cursor-pointer">About</a>
+        <a href="#services" className="text-xl cursor-pointer">Services</a>
+        <a href="#support" className="text-xl cursor-pointer">Live support</a>
+        <a href="#plans" className="text-xl cursor-pointer">Our plans</a>
         <button
           onClick={handleNavigateToLoginPage}
           className="bg-[#FFF200] rounded-xl cursor-pointer hover:-translate-y-1 transition-transform duration-300 pt-2 pb-2 pl-10 pr-10 text-2xl border-2 border-gray-900 shadow-[6px_6px_0px_#1e293b]">

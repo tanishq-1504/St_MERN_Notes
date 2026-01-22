@@ -4,15 +4,16 @@ import LandingHomeRightBottom from "./LandingHomeRightBottom/LandingHomeRightBot
 
 const LandingHomeRight = () => {
   return (
-    <div>
-      <div>
-        <div className="w-full h-105">
-          <LandingHomeRightTop />
-        </div>
-        <div className="w-full h-105 pt-7 pl-2">
-          <LandingHomeRightBottom />
-        </div>
+    <div className="relative w-full">
+      
+      <div className="w-full">
+        <LandingHomeRightTop />
       </div>
+
+      <div className="absolute top-[53.5%] left-0 w-full z-10 pl-2">
+        <LandingHomeRightBottom />
+      </div>
+
     </div>
   );
 };
