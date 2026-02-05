@@ -4,7 +4,6 @@ function validate(schema){
     return function(req, res, next){
         try {
             const validated = schema.parse(req.body);
-            console.log("Inside validate(): ",validated);
             req.body = validated;
             next();
         } catch (error) {
@@ -22,7 +21,6 @@ function validate(schema){
                 })
             }
 
-            // console.error(error)
             res.status(500).json({
                 message: "Internal Server Error"
             })

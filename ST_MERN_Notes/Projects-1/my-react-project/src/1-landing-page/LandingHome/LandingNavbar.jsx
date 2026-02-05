@@ -18,7 +18,7 @@ const LandingNavbar = () => {
         <Link className="bg-amber-400 cursor-pointer rounded-full p-6 border-2 border-gray-900 shadow-[6px_6px_0px_#1e293b]">
           Logo
         </Link>
-        <h1 className="text-5xl pt-2">JEDI</h1>
+        <h1 className="text-5xl pt-2">EduTech</h1>
       </div>
 
       <div className="pr-10 pt-8 space-x-10">

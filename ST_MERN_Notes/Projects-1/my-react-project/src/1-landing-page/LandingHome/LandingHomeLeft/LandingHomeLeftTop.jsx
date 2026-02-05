@@ -11,7 +11,7 @@ const LandingHomeLeftTop = () => {
     <div className="space-y-7">
       <div className="text-6xl pl-10 pt-10 pb-3 space-y-3">
         <h1>Knowledge </h1>
-        <h1>That Fits Your Life.</h1>
+        <h1>That Fits Your Style.</h1>
       </div>
       <div className=" text-2xl pl-10 space-y-1">
         <h1>A selective platform to connect great tuitors  </h1>

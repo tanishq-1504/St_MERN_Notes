@@ -1,14 +1,15 @@
 import dotenv from "dotenv";
-dotenv.config();
-import mongoose from "mongoose";
 
-const MANGO_DB_URI = process.env.MANGO_DB_URI;
+import mongoose from "mongoose";
+dotenv.config();
+
+const MONGO_DB_URI = process.env.MONGO_DB_URI;
 
 async function connectMangoDb() {
   try {
-    const mango = await mongoose.connect(MANGO_DB_URI);
+    const mango = await mongoose.connect(process.env.MONGO_DB_URI);
     console.log("MangoDb has been connected successfully!");
-  } catch (erroe) {
+  } catch (error) {
     console.error(error);
     process.exit(1);
   }

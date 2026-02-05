@@ -2,8 +2,8 @@ import React from 'react'
 
 const LandingAbout = () => {
   return (
-    <div id="about">LandingAbout</div>
+    <div>LandingAbout</div>
   )
 }
 
-export default LandingAbout
+export default LandingAbout;
